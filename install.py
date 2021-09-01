@@ -21,3 +21,4 @@ WantedBy=multi-user.target""")
 
 os.system("sudo systemctl daemon-reload")
 os.system("sudo systemctl enable PIAirQuality.service")
+os.system("sudo systemctl restart PIAirQuality.service")
