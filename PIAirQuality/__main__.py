@@ -11,7 +11,7 @@ from Adafruit_IO import Client
 PAYLOAD_LENGTH = 10
 PAYLOAD_STRUCT = '<BBHHHBB'
 PAYLOAD_HEADERS = namedtuple('Reading', 'HDR CMD PM25 PM10 ID CHK TAIL')
-MESSAGE_INTERVAL = 60
+MESSAGE_INTERVAL = 20
 
 def parse_pmi(bytes):
     raw = list(struct.unpack(PAYLOAD_STRUCT, bytes))
