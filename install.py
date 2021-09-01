@@ -13,6 +13,8 @@ ExecStart=/usr/bin/python3 -m PIAirQuality
 Restart=always
 EnvironmentFile=/home/pi/PIAirQuality/.env
 User=pi
+StandardOutput=inherit
+StandardError=inherit
  
 [Install]
 WantedBy=multi-user.target""")
