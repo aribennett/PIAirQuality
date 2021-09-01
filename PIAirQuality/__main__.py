@@ -42,11 +42,10 @@ if __name__ == "__main__":
             input_str += char
         elif len(input_str) == PAYLOAD_LENGTH:
             values = parse_pmi(input_str)
-
+            print(values)
             if time() - last_message_time > MESSAGE_INTERVAL:
                 try:
                     aio_client.send(os.environ.get('ADAFRUIT_IO_FEED'), values.PM25)
-                    data = aio_client.receive(os.environ.get('ADAFRUIT_IO_FEED'))
                     last_message_time = time()
                 except Exception as e:
                     print(e)
