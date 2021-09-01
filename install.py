@@ -9,7 +9,7 @@ After=multi-user.target
  
 [Service]
 Type=simple
-ExecStart=/usr/bin/python3 -m PIAirQuality -u
+ExecStart=/usr/bin/python3 -u -m PIAirQuality
 Restart=always
 EnvironmentFile=/home/pi/PIAirQuality/.env
 User=pi
