@@ -2,8 +2,6 @@ import os
 
 SERVICE_FILE = '/etc/systemd/system/PIAirQuality.service'
 
-os.system('pip3 install --editable ../PIAirQuality')
-
 if not os.path.exists('.env'):
     with open('.env', 'w') as f:
         username = input("ADAFRUIT_IO_USERNAME=")
