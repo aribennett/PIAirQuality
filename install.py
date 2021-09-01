@@ -11,7 +11,7 @@ After=multi-user.target
 Type=simple
 ExecStart=/usr/bin/python3 -m PIAirQuality
 Restart=always
-Environment=/home/pi/PIAirQuality/.env
+EnvironmentFile=/home/pi/PIAirQuality/.env
 User=pi
  
 [Install]
